@@ -203,50 +203,66 @@
     % Key Projects Section
     \section{Featured Projects}
 
-    \begin{twocolentry}{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{\textbf{Digitopia: AI Competition Judge}} \hfill \small\faGithub}
-        {\textit{Streamlit, YOLO11, Groq, LangGraph, ChromaDB}}
+    \begin{twocolentry}{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{\textbf{Digitopia AI Competition Judgment System}} \hfill \small\faGithub}
+        {\textit{Streamlit, YOLO11, Groq, LangGraph, ChromaDB, MiniLM}}
     \end{twocolentry}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built a multimodal hackathon evaluation system combining audio transcription, body language pose tracking, PDF/PPTX parsing, and a ChromaDB-backed RAG assistant.
+            \item Built a 2-phase multimodal hackathon evaluation system: Phase 1 uses Groq speech-to-text + YOLO11 pose estimation for body language scoring; Phase 2 adds PDF/PPTX analysis via a LangGraph Plan→Score→Verify grading agent.
+            \item Implemented a ChromaDB-backed RAG assistant for natural language querying of evaluation results, a leaderboard, and automated PDF report export.
         \end{highlights}
     \end{onecolentry}
 
     \vspace{0.1 cm}
 
     \begin{twocolentry}{\href{https://github.com/JaMallJR/LegalCompanyRAG}{\textbf{LexAI: Legal Document Assistant}} \hfill \small\faGithub}
-        {\textit{FastAPI, MiniLM, BM25, NumPy, SSE}}
+        {\textit{FastAPI, MiniLM-L6, BM25, NumPy, OpenRouter, SSE}}
     \end{twocolentry}
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed a zero-wrapper legal RAG pipeline featuring Reciprocal Rank Fusion (RRF) hybrid search, section-aware chunking, and real-time SSE token streaming.
+            \item Developed a zero-wrapper RAG pipeline for legal-tech with Hybrid Retrieval (RRF), section-aware chunking at natural boundaries (Articles, Clauses), real-time SSE token streaming, and source citations.
+            \item Supports multi-document cross-querying, conversation export to DOCX, and persistent session storage — built with no LangChain or FAISS dependencies.
         \end{highlights}
     \end{onecolentry}
 
     \vspace{0.1 cm}
 
     \begin{twocolentry}{\textbf{Semantrix: Learning-to-Rank Search Engine}}
-        {\textit{Tantivy, LightGBM, SentenceTransformers, Modal}}
+        {\textit{Tantivy, LightGBM LambdaRank, SentenceTransformers, Modal, Streamlit}}
     \end{twocolentry}
     \begin{onecolentry}
         \begin{highlights}
-            \item Implemented a 2-stage LTR engine on MS MARCO combining Tantivy fast recall with LightGBM LambdaRank and Modal serverless GPU inference.
+            \item Engineered a production 2-stage search engine on MS MARCO: Tantivy fast BM25 recall + LightGBM LambdaRank re-ranking with 7 engineered features (BM25, TF-IDF, semantic similarity, exact match).
+            \item Deployed serverless GPU inference via Modal with per-result feature explainability in a Streamlit UI.
         \end{highlights}
     \end{onecolentry}
 
     \vspace{0.1 cm}
 
-    \begin{twocolentry}{\textbf{OmniFind: Multimodal Product Discovery}}
-        {\textit{Express, React, DINO, Qdrant, Docker}}
+    \begin{twocolentry}{\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
+        {\textit{Express.js, React, MongoDB, DINO, Qdrant, Docker}}
     \end{twocolentry}
     \begin{onecolentry}
         \begin{highlights}
-            \item Created an e-commerce search platform supporting text, DINO visual similarity search, and audio search indexing 9,800+ products.
+            \item Built a full-stack e-commerce search platform supporting text/semantic search, DINO+Qdrant visual search, and audio (Whisper) search over 9,800+ indexed products.
+            \item Containerized with Docker and MongoDB; includes admin panel for vector sync, JWT authentication, and category filtering.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.1 cm}
+
+    \begin{twocolentry}{\textbf{ContentPro Creator Agent}}
+        {\textit{LibreChat, Claude Sonnet, GPT-4.1, Gemini, Tavily, RAG}}
+    \end{twocolentry}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Designed a \textbf{Mixture-of-Agents (MoA)} content pipeline: Gemini researches via Tavily web search, Claude Sonnet writes platform-adapted posts, GPT-4.1 edits for quality and formatting compliance.
+            \item Supports LinkedIn, blog, and social media formats with brand voice adherence via File Search/RAG and persistent memory modules.
         \end{highlights}
     \end{onecolentry}
 
     % Education & Certifications
-    \section{Education \& Certifications}
+    \section{Education}
 
     \begin{twocolentry}{\textbf{Jul 2023}}
         {\textbf{BSc in Bioinformatics} $|$ \textbf{GPA: 3.61 / 4.0} (Very Good with Honors)}
@@ -254,17 +270,38 @@
     \begin{onecolentry}
         \textit{Faculty of Computers and Information, Assiut University} \hfill \textit{Assiut, Egypt}
     \end{onecolentry}
+    \vspace{0.08 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Graduation Project recognized for excellence.
+        \end{highlights}
+    \end{onecolentry}
 
     \vspace{0.15 cm}
 
+    \section{Courses \& Certifications}
+
+    \begin{twocolentry}{\textbf{Dec 2025}}
+        {\textbf{Getting Started with Deep Learning} -- NVIDIA Deep Learning Institute}
+    \end{twocolentry}
+
+    \vspace{0.06 cm}
+
+    \begin{twocolentry}{\textbf{Jul 2023}}
+        {\textbf{Applied Data Science} -- WorldQuant University}
+    \end{twocolentry}
+
+    \vspace{0.06 cm}
+
+    \begin{twocolentry}{\textbf{Dec 2022}}
+        {\textbf{Data Analysis Professional Nanodegree} -- Udacity}
+    \end{twocolentry}
+
+    % Military Status — Separate Section
+    \section{Additional Information}
+
     \begin{onecolentry}
-        \textbf{Certifications:}
-        \begin{highlights}
-            \item \textbf{Getting Started with Deep Learning} -- NVIDIA Deep Learning Institute (Dec 2025)
-            \item \textbf{Applied Data Science} -- WorldQuant University (Jul 2023)
-            \item \textbf{Data Analysis Professional Nanodegree} -- Udacity (Dec 2022)
-            \item \textbf{Military Service Status:} Completed (Jun 2025)
-        \end{highlights}
+        \textbf{Military Service Status:} Completed (Jun 2025) \hfill \textbf{Languages:} Arabic (Native), English (Professional)
     \end{onecolentry}
 
 \end{document}
