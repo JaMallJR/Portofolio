@@ -195,19 +195,6 @@ AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and hands-on experience
 % ── FEATURED PROJECTS ────────────────────────────────────────
 \section{Featured Projects}
 
-\begin{twocolentry}{\textit{FastAPI · MiniLM-L6 · BM25 · OpenRouter · SSE}}
-    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}}\
-     \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
-\end{twocolentry}
-\vspace{0.04cm}
-\begin{onecolentry}
-    \begin{highlights}
-        \item Zero-wrapper legal RAG pipeline with Hybrid Retrieval (RRF), section-aware chunking (Articles/Clauses), SSE streaming, source citations, cross-document comparison, and DOCX export. No LangChain.
-    \end{highlights}
-\end{onecolentry}
-
-\vspace{0.08cm}
-
 \begin{twocolentry}{\textit{Streamlit · YOLO11 · Groq · LangGraph · ChromaDB}}
     {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}}\
      \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
@@ -216,6 +203,55 @@ AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and hands-on experience
 \begin{onecolentry}
     \begin{highlights}
         \item Automated hackathon judging via multimodal analysis (audio STT, body-language pose, PDF/PPTX) and a LangGraph agentic grader with ChromaDB RAG and leaderboard dashboard.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08cm}
+
+\begin{twocolentry}{\textit{FastAPI · MiniLM-L6 · BM25 · OpenRouter · SSE}}
+    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}}\
+     \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Zero-wrapper legal RAG pipeline with Hybrid Retrieval (RRF), section-aware chunking (Articles/Clauses), SSE streaming, source citations, cross-document comparison, and DOCX export.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08cm}
+
+\begin{twocolentry}{\textit{Tantivy · LightGBM LambdaRank · Modal · Streamlit}}
+    {\textbf{Semantrix: Learning-to-Rank Search Engine}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item 2-stage LTR engine on MS MARCO: Tantivy BM25 recall re-ranked with LightGBM LambdaRank (7 engineered features) and Modal serverless GPU inference.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08cm}
+
+\begin{twocolentry}{\textit{Express.js · React · DINO · Qdrant · Docker}}
+    {\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Full-stack e-commerce search platform supporting text, DINO+Qdrant visual similarity, and Whisper audio search indexing 9,800+ products.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08cm}
+
+\begin{twocolentry}{\textit{LibreChat · Claude Sonnet · GPT-4.1 · Gemini · Tavily}}
+    {\textbf{ContentPro Creator Agent}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item 3-model Mixture-of-Agents (MoA) content pipeline on LibreChat: Gemini web search research $\to$ Claude Sonnet writing $\to$ GPT-4.1 formatting and quality control.
     \end{highlights}
 \end{onecolentry}
 
