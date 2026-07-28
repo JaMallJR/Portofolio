@@ -1,42 +1,43 @@
-\documentclass[10pt, letterpaper]{article}
+% ============================================================
+% Jamal Ghobrial — AI Engineer CV
+% ATS-optimised, single-column, 1-page target
+% ============================================================
+\documentclass[10pt, a4paper]{article}
 
-% Packages:
+% ── Page geometry ───────────────────────────────────────────
 \usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=1.2 cm, % separation between body and page edge from top
-    bottom=1.2 cm, % separation between body and page edge from bottom
-    left=1.2 cm, % separation between body and page edge from left
-    right=1.2 cm, % separation between body and page edge from right
-    footskip=0.7 cm,
+    ignoreheadfoot,
+    top=1.0cm, bottom=1.0cm,
+    left=1.2cm, right=1.2cm,
+    footskip=0.5cm
 ]{geometry}
+
+% ── Core packages ───────────────────────────────────────────
 \usepackage{titlesec}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
-\definecolor{primaryColor}{RGB}{0, 70, 140} % Professional blue accent
-\definecolor{textColor}{RGB}{30, 30, 30}
+\definecolor{accent}{RGB}{0, 79, 144}      % professional dark-blue accent
+\definecolor{muted}{RGB}{90, 90, 90}
 \usepackage{enumitem}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
 \usepackage[
-    pdftitle={Jamal Ghobrial - AI Engineer CV},
+    pdftitle={Jamal Ghobrial — AI Engineer},
     pdfauthor={Jamal Ghobrial},
-    pdfcreator={LaTeX},
     colorlinks=true,
-    urlcolor=primaryColor,
-    linkcolor=primaryColor
+    urlcolor=accent,
+    linkcolor=accent
 ]{hyperref}
 \usepackage[pscoord]{eso-pic}
 \usepackage{calc}
 \usepackage{bookmark}
-\usepackage{lastpage}
 \usepackage{changepage}
 \usepackage{paracol}
-\usepackage{ifthen}
 \usepackage{needspace}
 \usepackage{iftex}
 
-% Machine readable PDF setup for ATS:
+% ── ATS machine-readable PDF ────────────────────────────────
 \ifPDFTeX
     \input{glyphtounicode}
     \pdfgentounicode=1
@@ -44,10 +45,9 @@
     \usepackage[utf8]{inputenc}
     \usepackage{lmodern}
 \fi
-
 \usepackage{charter}
 
-% Layout settings:
+% ── Layout settings ─────────────────────────────────────────
 \raggedright
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty}
@@ -57,251 +57,191 @@
 \setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large\color{primaryColor}}{}{0pt}{}[\vspace{1pt}\titlerule]
+% Section title: bold + coloured rule underneath
+\titleformat{\section}
+  {\needspace{3\baselineskip}\bfseries\large\color{accent}}
+  {}{0pt}{}
+  [\vspace{1pt}{\color{accent}\titlerule}]
 
-\titlespacing{\section}{-1pt}{0.25 cm}{0.15 cm}
+\titlespacing{\section}{0pt}{0.25cm}{0.12cm}
 
+% ── Custom environments ─────────────────────────────────────
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
 
-\newenvironment{highlights}{
-    \begin{itemize}[
-        topsep=0.04 cm,
-        parsep=0.04 cm,
-        partopsep=0pt,
-        itemsep=1pt,
-        leftmargin=12pt
-    ]
-}{
-    \end{itemize}
+\newenvironment{highlights}{%
+    \begin{itemize}[topsep=0.03cm, parsep=0.03cm,
+                    partopsep=0pt, itemsep=1pt, leftmargin=11pt]%
+}{%
+    \end{itemize}%
 }
 
-\newenvironment{onecolentry}{
-    \begin{adjustwidth}{0cm}{0cm}
-}{
-    \end{adjustwidth}
+\newenvironment{onecolentry}{%
+    \begin{adjustwidth}{0cm}{0cm}%
+}{%
+    \end{adjustwidth}%
 }
 
-\newenvironment{twocolentry}[2][]{
+% twocolentry: left=content  right=date/stack (4.6cm wide)
+\newenvironment{twocolentry}[2][]{%
     \onecolentry
-    \def\secondColumn{#2}
-    \setcolumnwidth{\fill, 4.5 cm}
-    \begin{paracol}{2}
-}{
-    \switchcolumn \raggedleft \secondColumn
-    \end{paracol}
+    \def\secondColumn{#2}%
+    \setcolumnwidth{\fill, 4.6cm}%
+    \begin{paracol}{2}%
+}{%
+    \switchcolumn\raggedleft\secondColumn
+    \end{paracol}%
     \endonecolentry
 }
 
-\newenvironment{header}{
-    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.3}
-}{
-    \par\kern\topsep
-}
+\newenvironment{header}{%
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.25}%
+}{\par\kern\topsep}
 
+% ============================================================
 \begin{document}
-    \newcommand{\AND}{\unskip\hspace{6pt}$|$\hspace{6pt}\ignorespaces}
 
-    % Header Section
-    \begin{header}
-        {\fontsize{20pt}{20pt}\selectfont \bfseries Jamal Ghobrial} \\ \vspace{2pt}
-        {\fontsize{12pt}{12pt}\selectfont \color{primaryColor}\bfseries AI Engineer $|$ Machine Learning $|$ RAG \& LLM Agent Systems} \\ \vspace{4pt}
-        \normalsize
-        \faEnvelope\ \href{mailto:ghobrialjamal@gmail.com}{ghobrialjamal@gmail.com} \AND
-        \faPhone\ \href{tel:+201501705943}{+20 150 170 5943} \AND
-        \faGithub\ \href{https://github.com/JaMallJR}{github.com/JaMallJR} \AND
-        \faLinkedin\ \href{https://www.linkedin.com/in/jamal-ghobrial/}{linkedin.com/in/jamal-ghobrial} \AND
-        \faKaggle\ \href{https://www.kaggle.com/jamalghobrial}{kaggle.com/jamalghobrial}
-    \end{header}
+% ── HEADER ──────────────────────────────────────────────────
+\begin{header}
+    {\fontsize{20pt}{20pt}\selectfont\bfseries Jamal Ghobrial}\\[3pt]
+    {\fontsize{11pt}{11pt}\selectfont\color{accent}
+     AI Engineer \ $|$ \ Machine Learning \ $|$ \ LLM Agents \& RAG Systems}\\[5pt]
+    \small
+    \faEnvelope\ \href{mailto:ghobrialjamal@gmail.com}{ghobrialjamal@gmail.com}
+    \quad\textcolor{muted}{|}
+    \faPhone\ \href{tel:+201501705943}{+20 150 170 5943}
+    \quad\textcolor{muted}{|}
+    \faGithub\ \href{https://github.com/JaMallJR}{github.com/JaMallJR}
+    \quad\textcolor{muted}{|}
+    \faLinkedin\ \href{https://www.linkedin.com/in/jamal-ghobrial/}{linkedin.com/in/jamal-ghobrial}
+    \quad\textcolor{muted}{|}
+    \faGlobe\ \href{https://jamalljr.github.io/Portofolio/}{Portfolio}
+\end{header}
 
-    \vspace{-0.2 cm}
+\vspace{0.05cm}
 
-    % Professional Summary
-    \section{Professional Summary}
-    \begin{onecolentry}
-        Results-driven \textbf{AI Engineer} with proven experience designing and deploying production-grade Machine Learning, LLM-powered agentic systems, Retrieval-Augmented Generation (RAG) pipelines, and Learning-to-Rank (LTR) search engines. Holds a BSc in Bioinformatics (GPA 3.61/4.0). Skilled across the complete AI development lifecycle — from data engineering, computer vision (YOLO pose), and vector search (Qdrant, ChromaDB) to cloud deployment (Azure, Docker, Modal). Top 29\% Kaggle competitor with certifications from NVIDIA, Microsoft, and WorldQuant University.
-    \end{onecolentry}
+% ── PROFESSIONAL SUMMARY ─────────────────────────────────────
+\section{Professional Summary}
+\begin{onecolentry}
+AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and hands-on experience across 3 internships delivering production-grade LLM agents, RAG pipelines, multimodal search platforms, and Learning-to-Rank systems. Skilled in the full AI lifecycle — data engineering, model development, and cloud deployment (Azure, Docker, Modal). Top 29\% Kaggle competitor; certified by NVIDIA, Microsoft, and WorldQuant University.
+\end{onecolentry}
 
-    % Technical Skills Section
-    \section{Technical Skills}
-    \begin{onecolentry}
-        \textbf{Programming Languages:} Python (PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas), C++, Go, SQL. \\
-        \textbf{AI, LLMs \& RAG:} RAG Architecture, LangGraph, Mixture-of-Agents (MoA), Prompt Engineering, Qdrant, ChromaDB, LibreChat. \\
-        \textbf{Information Retrieval \& Search:} Learning-to-Rank (LTR), LightGBM LambdaRank, Tantivy, BM25, Hybrid Search (RRF), Semantic Search. \\
-        \textbf{Computer Vision \& Speech:} YOLO11 Pose Estimation, DINO Visual Embeddings, Speech-to-Text (Groq/Whisper), Image Processing. \\
-        \textbf{Frameworks \& Web:} Hugging Face Transformers, SentenceTransformers, FastAPI, Express.js, React, Node.js, Streamlit. \\
-        \textbf{Cloud, MLOps \& Tools:} Microsoft Azure, AWS SageMaker, Docker, Modal (Serverless GPU), Git/GitHub, Linux.
-    \end{onecolentry}
+% ── TECHNICAL SKILLS ─────────────────────────────────────────
+\section{Technical Skills}
+\begin{onecolentry}
+\textbf{Languages \& Libraries:} Python (PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas, SciPy), SQL, Go, C++\\[2pt]
+\textbf{AI / LLMs / RAG:} RAG Pipelines, LangGraph, Agentic Workflows, Prompt Engineering, ChromaDB, Qdrant, LibreChat, MoA\\[2pt]
+\textbf{Search \& IR:} Learning-to-Rank (LTR), LightGBM LambdaRank, BM25 / Tantivy, Hybrid Search (RRF), SentenceTransformers\\[2pt]
+\textbf{CV \& Speech:} YOLO11 Pose Estimation, DINO Visual Embeddings, Speech-to-Text (Groq / Whisper), Image Processing\\[2pt]
+\textbf{Frameworks \& Web:} Hugging Face Transformers, FastAPI, Express.js, React, Node.js, Streamlit\\[2pt]
+\textbf{Cloud \& MLOps:} Microsoft Azure, AWS SageMaker, Docker, Modal (Serverless GPU), Git/GitHub
+\end{onecolentry}
 
-    % Professional Experience Section
-    \section{Professional Experience}
+% ── EXPERIENCE ───────────────────────────────────────────────
+\section{Experience}
 
-    \begin{twocolentry}{\textbf{Feb 2026 -- May 2026}}
-        {\textbf{AI Engineer Intern}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \textit{Areeb Technology} \hfill \textit{Cairo, Egypt}
-    \end{onecolentry}
-    \vspace{0.08 cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Architected a 3-agent \textbf{Mixture-of-Agents (MoA)} content generation pipeline using LibreChat, Gemini for research, Claude Sonnet for drafting, and GPT-4.1 for automated quality enforcement.
-            \item Developed \textbf{Semantrix}, a production-style 2-stage search engine integrating Tantivy BM25 recall with LightGBM LambdaRank re-ranking and Modal serverless GPU inference.
-            \item Built \textbf{OmniFind}, a full-stack multimodal product discovery application featuring text, visual (DINO + Qdrant), and audio search with Docker containerization.
-            \item Streamlined team software development processes on \textbf{Microsoft Azure} and Git/GitHub via structured code reviews and pull requests.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textbf{Feb 2026 – May 2026}}
+    {\textbf{AI Engineer Intern} — \textit{Areeb Technology, Cairo EG}}
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built \textbf{OmniFind}, a full-stack multimodal e-commerce search platform (text, DINO+Qdrant visual, Whisper audio) indexing 9,800+ products; containerised with Docker + MongoDB.
+        \item Developed \textbf{Semantrix}, a 2-stage LTR search engine: Tantivy BM25 recall re-ranked with LightGBM LambdaRank (7 engineered features) deployed serverlessly via Modal.
+        \item Architected \textbf{ContentPro Creator Agent}: a 3-model MoA pipeline (Gemini research $\to$ Claude Sonnet writing $\to$ GPT-4.1 editing) on LibreChat with Tavily web search and RAG.
+        \item Streamlined Azure-hosted team workflows using Git/GitHub structured PRs and code reviews.
+    \end{highlights}
+\end{onecolentry}
 
-    \vspace{0.12 cm}
+\vspace{0.12cm}
 
-    \begin{twocolentry}{\textbf{Oct 2025 -- Jan 2026}}
-        {\textbf{AI Engineer Intern}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \textit{National Telecommunications Institute (NTI)} \hfill \textit{Cairo, Egypt}
-    \end{onecolentry}
-    \vspace{0.08 cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Designed \textbf{Digitopia AI Competition Judge}, an automated hackathon evaluation system integrating Groq speech-to-text, YOLO11 pose estimation, and LangGraph grading agents.
-            \item Implemented document analysis pipelines (PDF/PPTX) and a \textbf{ChromaDB RAG assistant} for querying evaluation results in natural language.
-            \item Benchmarked ML, Deep Learning, Computer Vision, and NLP models in PyTorch and TensorFlow across diverse evaluation criteria.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textbf{Oct 2025 – Jan 2026}}
+    {\textbf{AI Engineer Intern} — \textit{NTI, Cairo EG}}
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Designed \textbf{Digitopia AI Competition Judgment System}: 2-phase pipeline using Groq STT + YOLO11 pose estimation (Phase 1) and LangGraph Plan$\to$Score$\to$Verify grading agent with PDF/PPTX parsing (Phase 2).
+        \item Built a ChromaDB-backed RAG assistant for natural-language querying of results plus automated PDF report export.
+        \item Benchmarked ML, Deep Learning, CV, and NLP models across PyTorch and TensorFlow with structured performance reports.
+    \end{highlights}
+\end{onecolentry}
 
-    \vspace{0.12 cm}
+\vspace{0.12cm}
 
-    \begin{twocolentry}{\textbf{Jun 2025 -- Dec 2025}}
-        {\textbf{Microsoft Machine Learning Engineer Intern}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \textit{Digital Egypt Pioneers Initiative (DEPI)} \hfill \textit{Cairo, Egypt}
-    \end{onecolentry}
-    \vspace{0.08 cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Developed classification, prediction, and clustering models using Scikit-Learn and neural networks, applying best practices in data preprocessing and model evaluation.
-            \item Automated data ingestion and preprocessing workflows to optimize model accuracy and reduce training latency.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textbf{Jun 2025 – Dec 2025}}
+    {\textbf{ML Engineer Intern (Microsoft Track)} — \textit{DEPI, Cairo EG}}
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed classification, regression, and clustering models with Scikit-Learn and TensorFlow; applied MLOps best practices for data preprocessing, validation, and model tracking.
+        \item Automated ETL pipelines to reduce training data preparation time and improve reproducibility.
+    \end{highlights}
+\end{onecolentry}
 
-    \vspace{0.12 cm}
+\vspace{0.12cm}
 
-    \begin{twocolentry}{\textbf{Jul 2023 -- Oct 2023}}
-        {\textbf{Machine Learning Intern}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \textit{ITIDA -- EME Initiative (Egypt Makes Electronics)} \hfill \textit{Assiut, Egypt}
-    \end{onecolentry}
-    \vspace{0.08 cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Built and optimized an industrial defect prediction model using XGBoost and Scikit-Learn, achieving \textbf{85\% accuracy} and a \textbf{40\% performance boost} through hyperparameter tuning and feature selection.
-            \item Competed in global Kaggle machine learning challenges, placing in the \textbf{Top 29\%} and \textbf{Top 33\%} out of thousands of participants.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textbf{Jul 2023 – Oct 2023}}
+    {\textbf{Machine Learning Intern} — \textit{ITIDA / EME Initiative, Assiut EG}}
+\end{twocolentry}
+\vspace{0.06cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built an industrial defect prediction model (XGBoost + Scikit-Learn) achieving \textbf{85\% accuracy} with a \textbf{40\% performance uplift} via dimensionality reduction and hyperparameter tuning.
+        \item Placed \textbf{Top 29\%} and \textbf{Top 33\%} globally in competitive Kaggle ML challenges.
+    \end{highlights}
+\end{onecolentry}
 
-    % Key Projects Section
-    \section{Featured Projects}
+% ── FEATURED PROJECTS ────────────────────────────────────────
+\section{Featured Projects}
 
-    \begin{twocolentry}{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{\textbf{Digitopia AI Competition Judgment System}} \hfill \small\faGithub}
-        {\textit{Streamlit, YOLO11, Groq, LangGraph, ChromaDB, MiniLM}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Built a 2-phase multimodal hackathon evaluation system: Phase 1 uses Groq speech-to-text + YOLO11 pose estimation for body language scoring; Phase 2 adds PDF/PPTX analysis via a LangGraph Plan→Score→Verify grading agent.
-            \item Implemented a ChromaDB-backed RAG assistant for natural language querying of evaluation results, a leaderboard, and automated PDF report export.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textit{FastAPI · MiniLM-L6 · BM25 · OpenRouter · SSE}}
+    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}}\
+     \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Zero-wrapper legal RAG pipeline with Hybrid Retrieval (RRF), section-aware chunking (Articles/Clauses), SSE streaming, source citations, cross-document comparison, and DOCX export. No LangChain.
+    \end{highlights}
+\end{onecolentry}
 
-    \vspace{0.1 cm}
+\vspace{0.08cm}
 
-    \begin{twocolentry}{\href{https://github.com/JaMallJR/LegalCompanyRAG}{\textbf{LexAI: Legal Document Assistant}} \hfill \small\faGithub}
-        {\textit{FastAPI, MiniLM-L6, BM25, NumPy, OpenRouter, SSE}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Developed a zero-wrapper RAG pipeline for legal-tech with Hybrid Retrieval (RRF), section-aware chunking at natural boundaries (Articles, Clauses), real-time SSE token streaming, and source citations.
-            \item Supports multi-document cross-querying, conversation export to DOCX, and persistent session storage — built with no LangChain or FAISS dependencies.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textit{Streamlit · YOLO11 · Groq · LangGraph · ChromaDB}}
+    {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}}\
+     \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
+\end{twocolentry}
+\vspace{0.04cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Automated hackathon judging via multimodal analysis (audio STT, body-language pose, PDF/PPTX) and a LangGraph agentic grader with ChromaDB RAG and leaderboard dashboard.
+    \end{highlights}
+\end{onecolentry}
 
-    \vspace{0.1 cm}
+% ── EDUCATION ────────────────────────────────────────────────
+\section{Education}
 
-    \begin{twocolentry}{\textbf{Semantrix: Learning-to-Rank Search Engine}}
-        {\textit{Tantivy, LightGBM LambdaRank, SentenceTransformers, Modal, Streamlit}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Engineered a production 2-stage search engine on MS MARCO: Tantivy fast BM25 recall + LightGBM LambdaRank re-ranking with 7 engineered features (BM25, TF-IDF, semantic similarity, exact match).
-            \item Deployed serverless GPU inference via Modal with per-result feature explainability in a Streamlit UI.
-        \end{highlights}
-    \end{onecolentry}
+\begin{twocolentry}{\textbf{Jul 2023}}
+    {\textbf{BSc in Bioinformatics} — GPA \textbf{3.61 / 4.0} (Very Good with Honors)}
+\end{twocolentry}
+\begin{onecolentry}
+    \textit{Faculty of Computers \& Information, Assiut University} \quad — Graduation Project recognised for excellence.
+\end{onecolentry}
 
-    \vspace{0.1 cm}
+% ── CERTIFICATIONS ───────────────────────────────────────────
+\section{Courses \& Certifications}
+\begin{onecolentry}
+\textbf{Getting Started with Deep Learning} — NVIDIA DLI \hfill Dec 2025 \\[2pt]
+\textbf{Applied Data Science Lab} — WorldQuant University \hfill Jul 2023 \\[2pt]
+\textbf{Data Analysis Professional Nanodegree} — Udacity \hfill Dec 2022
+\end{onecolentry}
 
-    \begin{twocolentry}{\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
-        {\textit{Express.js, React, MongoDB, DINO, Qdrant, Docker}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Built a full-stack e-commerce search platform supporting text/semantic search, DINO+Qdrant visual search, and audio (Whisper) search over 9,800+ indexed products.
-            \item Containerized with Docker and MongoDB; includes admin panel for vector sync, JWT authentication, and category filtering.
-        \end{highlights}
-    \end{onecolentry}
-
-    \vspace{0.1 cm}
-
-    \begin{twocolentry}{\textbf{ContentPro Creator Agent}}
-        {\textit{LibreChat, Claude Sonnet, GPT-4.1, Gemini, Tavily, RAG}}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Designed a \textbf{Mixture-of-Agents (MoA)} content pipeline: Gemini researches via Tavily web search, Claude Sonnet writes platform-adapted posts, GPT-4.1 edits for quality and formatting compliance.
-            \item Supports LinkedIn, blog, and social media formats with brand voice adherence via File Search/RAG and persistent memory modules.
-        \end{highlights}
-    \end{onecolentry}
-
-    % Education & Certifications
-    \section{Education}
-
-    \begin{twocolentry}{\textbf{Jul 2023}}
-        {\textbf{BSc in Bioinformatics} $|$ \textbf{GPA: 3.61 / 4.0} (Very Good with Honors)}
-    \end{twocolentry}
-    \begin{onecolentry}
-        \textit{Faculty of Computers and Information, Assiut University} \hfill \textit{Assiut, Egypt}
-    \end{onecolentry}
-    \vspace{0.08 cm}
-    \begin{onecolentry}
-        \begin{highlights}
-            \item Graduation Project recognized for excellence.
-        \end{highlights}
-    \end{onecolentry}
-
-    \vspace{0.15 cm}
-
-    \section{Courses \& Certifications}
-
-    \begin{twocolentry}{\textbf{Dec 2025}}
-        {\textbf{Getting Started with Deep Learning} -- NVIDIA Deep Learning Institute}
-    \end{twocolentry}
-
-    \vspace{0.06 cm}
-
-    \begin{twocolentry}{\textbf{Jul 2023}}
-        {\textbf{Applied Data Science} -- WorldQuant University}
-    \end{twocolentry}
-
-    \vspace{0.06 cm}
-
-    \begin{twocolentry}{\textbf{Dec 2022}}
-        {\textbf{Data Analysis Professional Nanodegree} -- Udacity}
-    \end{twocolentry}
-
-    % Military Status — Separate Section
-    \section{Additional Information}
-
-    \begin{onecolentry}
-        \textbf{Military Service Status:} Completed (Jun 2025) \hfill \textbf{Languages:} Arabic (Native), English (Professional)
-    \end{onecolentry}
+% ── ADDITIONAL INFORMATION ───────────────────────────────────
+\section{Additional Information}
+\begin{onecolentry}
+\textbf{Languages:} Arabic (Native) \quad English (Professional Working) \qquad
+\textbf{Military Service:} Completed (Jun 2025)
+\end{onecolentry}
 
 \end{document}
