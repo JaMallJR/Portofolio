@@ -95,11 +95,11 @@
     \quad\textcolor{muted}{|}
     \faPhone\ \href{tel:+201501705943}{+20 150 170 5943}
     \quad\textcolor{muted}{|}
-    \faGithub\ \href{https://github.com/JaMallJR}{github.com/JaMallJR}
+    \faGithub\ \href{https://github.com/ghobrialjamal}{github.com/ghobrialjamal}
     \quad\textcolor{muted}{|}
     \faLinkedin\ \href{https://www.linkedin.com/in/jamal-ghobrial/}{linkedin.com/in/jamal-ghobrial}
     \quad\textcolor{muted}{|}
-    \faGlobe\ \href{https://jamalljr.github.io/Portofolio/}{Portfolio}
+    \faGlobe\ \href{https://ghobrialjamal.github.io/Portofolio/}{Portfolio}
 \end{header}
 
 \vspace{0.05cm}
@@ -172,7 +172,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 % ── FEATURED PROJECTS ────────────────────────────────────────
 \section{Featured Projects}
 
-\entryline{\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}} \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}{\textit{LangGraph, YOLOv11, Groq, ChromaDB}}
+\entryline{\textbf{\href{https://github.com/ghobrialjamal/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}} \href{https://github.com/ghobrialjamal/AI-Competition-Judgment}{\faGithub}}{\textit{LangGraph, YOLOv11, Groq, ChromaDB}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -182,7 +182,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.06cm}
 
-\entryline{\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}} \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}{\textit{FastAPI, MiniLM-L6, BM25, OpenRouter, SSE}}
+\entryline{\textbf{\href{https://github.com/ghobrialjamal/LegalCompanyRAG}{LexAI: Legal Document Assistant}} \href{https://github.com/ghobrialjamal/LegalCompanyRAG}{\faGithub}}{\textit{FastAPI, MiniLM-L6, BM25, OpenRouter, SSE}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
