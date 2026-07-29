@@ -1,6 +1,6 @@
 % ============================================================
 % Jamal Ghobrial — AI Engineer CV
-% ATS-optimised, single-column, 1-page target
+% ATS-optimised · a4paper · 2-page target
 % ============================================================
 \documentclass[10pt, a4paper]{article}
 
@@ -17,7 +17,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
-\definecolor{accent}{RGB}{0, 79, 144}      % professional dark-blue accent
+\definecolor{accent}{RGB}{0, 79, 144}
 \definecolor{muted}{RGB}{90, 90, 90}
 \usepackage{enumitem}
 \usepackage{fontawesome5}
@@ -57,13 +57,12 @@
 \setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-% Section title: bold + coloured rule underneath
 \titleformat{\section}
   {\needspace{3\baselineskip}\bfseries\large\color{accent}}
   {}{0pt}{}
   [\vspace{1pt}{\color{accent}\titlerule}]
 
-\titlespacing{\section}{0pt}{0.25cm}{0.12cm}
+\titlespacing{\section}{0pt}{0.22cm}{0.10cm}
 
 % ── Custom environments ─────────────────────────────────────
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
@@ -71,21 +70,15 @@
 \newenvironment{highlights}{%
     \begin{itemize}[topsep=0.03cm, parsep=0.03cm,
                     partopsep=0pt, itemsep=1pt, leftmargin=11pt]%
-}{%
-    \end{itemize}%
-}
+}{\end{itemize}}
 
 \newenvironment{onecolentry}{%
-    \begin{adjustwidth}{0cm}{0cm}%
-}{%
-    \end{adjustwidth}%
-}
+    \begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
 
-% twocolentry: left=content  right=date/stack (4.6cm wide)
 \newenvironment{twocolentry}[2][]{%
     \onecolentry
     \def\secondColumn{#2}%
-    \setcolumnwidth{\fill, 4.6cm}%
+    \setcolumnwidth{\fill, 5.0cm}%
     \begin{paracol}{2}%
 }{%
     \switchcolumn\raggedleft\secondColumn
@@ -122,136 +115,142 @@
 % ── PROFESSIONAL SUMMARY ─────────────────────────────────────
 \section{Professional Summary}
 \begin{onecolentry}
-AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and hands-on experience across 3 internships delivering production-grade LLM agents, RAG pipelines, multimodal search platforms, and Learning-to-Rank systems. Skilled in the full AI lifecycle — data engineering, model development, and cloud deployment (Azure, Docker, Modal). Top 29\% Kaggle competitor; certified by NVIDIA, Microsoft, and WorldQuant University.
+AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and 19+ months across 4 internships building production-grade AI systems end-to-end. Designed and shipped 5 complex projects: a 2-phase agentic hackathon judging platform (YOLO11\,+\,LangGraph\,+\,DuckDuckGo fact-checking), a hybrid legal RAG assistant with RRF and SSE streaming, an 8.8M-document LTR search engine (Tantivy\,+\,LightGBM\,LambdaRank on Modal A100), a multimodal e-commerce discovery platform (DINOv2\,+\,BGE-M3\,+\,Whisper STT), and a 3-model Mixture-of-Agents content pipeline on LibreChat. Skilled across the full AI stack — agentic orchestration (LangGraph, LibreChat), vector databases (Qdrant, ChromaDB, pgvector), computer vision, speech-to-text, and serverless GPU deployment (Modal, Docker, Azure). Top\,29\% Kaggle competitor; certified by NVIDIA\,DLI, Microsoft/DEPI, and WorldQuant\,University.
 \end{onecolentry}
 
 % ── TECHNICAL SKILLS ─────────────────────────────────────────
 \section{Technical Skills}
 \begin{onecolentry}
 \textbf{Languages \& Libraries:} Python (PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas, SciPy), SQL, Go, C++\\[2pt]
-\textbf{AI / LLMs / RAG:} RAG Pipelines, LangGraph, Agentic Workflows, Prompt Engineering, ChromaDB, Qdrant, LibreChat, MoA\\[2pt]
-\textbf{Search \& IR:} Learning-to-Rank (LTR), LightGBM LambdaRank, BM25 / Tantivy, Hybrid Search (RRF), SentenceTransformers\\[2pt]
-\textbf{CV \& Speech:} YOLO11 Pose Estimation, DINO Visual Embeddings, Speech-to-Text (Groq / Whisper), Image Processing\\[2pt]
-\textbf{Frameworks \& Web:} Hugging Face Transformers, FastAPI, Express.js, React, Node.js, Streamlit\\[2pt]
-\textbf{Cloud \& MLOps:} Microsoft Azure, AWS SageMaker, Docker, Modal (Serverless GPU), Git/GitHub
+\textbf{ML \& Ranking:} LightGBM LambdaRank, XGBoost, Feature Engineering, Learning-to-Rank (LTR), NDCG Optimisation, ML Pipelines\\[2pt]
+\textbf{LLM \& Agentic AI:} LangGraph StateGraph, Groq SDK, OpenAI API, Anthropic Claude API, Gemini API, OpenRouter, Prompt Engineering\\[2pt]
+\textbf{RAG \& Vector Search:} RAG Pipelines, ChromaDB, Qdrant, pgvector, Hybrid Retrieval (BM25\,+\,Dense\,RRF), SentenceTransformers (MiniLM-L6-v2, BGE-M3), Tantivy BM25\\[2pt]
+\textbf{Computer Vision \& Speech:} YOLOv11 Pose Estimation, ByteTrack, DINOv2 (ViT-S/14), Whisper STT (Groq\,/\,Faster-Whisper), PyMuPDF, python-pptx\\[2pt]
+\textbf{Web \& Full-Stack:} FastAPI, Express.js, React\,19, Node.js, MongoDB\,/\,Mongoose, JWT Auth, Multer, Vite\\[2pt]
+\textbf{Tools \& Ecosystems:} LibreChat (self-hosted), Tavily Search, Firecrawl, Jina\,AI Reranker, SymSpell, Mixture-of-Agents (MoA), FPDF2, MoviePy\\[2pt]
+\textbf{Cloud \& DevOps:} Microsoft Azure, AWS SageMaker, Docker\,/\,Docker Compose, Modal Labs (A100\,/\,T4\,GPU), Git\,/\,GitHub
 \end{onecolentry}
 
 % ── EXPERIENCE ───────────────────────────────────────────────
 \section{Experience}
 
-\begin{twocolentry}{\textbf{Feb 2026 – May 2026}}
+\begin{twocolentry}{\textbf{Feb 2026 – May 2026} \textcolor{muted}{\small· 4 months}}
     {\textbf{AI Engineer Intern} — \textit{Areeb Technology, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built \textbf{OmniFind}, a full-stack multimodal e-commerce search platform (text, DINO+Qdrant visual, Whisper audio) indexing 9,800+ products; containerised with Docker + MongoDB.
-        \item Developed \textbf{Semantrix}, a 2-stage LTR search engine: Tantivy BM25 recall re-ranked with LightGBM LambdaRank (7 engineered features) deployed serverlessly via Modal.
-        \item Architected \textbf{ContentPro Creator Agent}: a 3-model MoA pipeline (Gemini research $\to$ Claude Sonnet writing $\to$ GPT-4.1 editing) on LibreChat with Tavily web search and RAG.
-        \item Streamlined Azure-hosted team workflows using Git/GitHub structured PRs and code reviews.
+        \item Built \textbf{OmniFind}: React\,19\,+\,Express backend with a persistent Python worker (JSON-RPC IPC) serving DINOv2 ViT-S/14 visual search (384-dim cosine), BGE-M3 dense\,+\,sparse hybrid search with Qdrant RRF fusion, Cloudflare\,Workers\,AI intent parsing, and Groq Whisper STT — indexing \textbf{9,842 Amazon products} with JWT auth and role-based access control.
+        \item Engineered \textbf{Semantrix}: 2-stage LTR pipeline over \textbf{8.8M MS\,MARCO documents} using Tantivy BM25 recall, 7-feature engineering (BM25 proxy, TF-IDF proxy, overlap ratio, exact match, semantic cosine), and LightGBM LambdaRank re-ranking — deployed serverlessly on Modal A100/T4 GPU.
+        \item Architected \textbf{ContentPro Creator Agent}: 3-model MoA pipeline on LibreChat — Gemini 2.5 Pro (1M-ctx researcher + Tavily/Firecrawl/Jina) $\to$ Claude Sonnet 4 (writer $\to$ Artifacts panel) $\to$ GPT-4.1 (QA editor for CTA, hashtags, brand voice) with pgvector RAG for brand guidelines.
+        \item Managed Azure-hosted team workflows via structured Git PR reviews and Docker containerisation.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Oct 2025 – Jan 2026}}
+\begin{twocolentry}{\textbf{Oct 2025 – Jan 2026} \textcolor{muted}{\small· 4 months}}
     {\textbf{AI Engineer Intern} — \textit{NTI, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed \textbf{Digitopia AI Competition Judgment System}: 2-phase pipeline using Groq STT + YOLO11 pose estimation (Phase 1) and LangGraph Plan$\to$Score$\to$Verify grading agent with PDF/PPTX parsing (Phase 2).
-        \item Built a ChromaDB-backed RAG assistant for natural-language querying of results plus automated PDF report export.
-        \item Benchmarked ML, Deep Learning, CV, and NLP models across PyTorch and TensorFlow with structured performance reports.
+        \item Designed \textbf{Digitopia AI Competition Judgment System}: Phase\,1 extracts audio via MoviePy $\to$ Groq Whisper-large-v3 STT $\to$ llama-3.3-70b scoring; YOLOv11 Pose\,+\,ByteTrack computes gesture rate, posture variance, and EMA-smoothed head movement per presenter.
+        \item Built Phase\,2 LangGraph StateGraph: \texttt{Plan} (SHA-256 cached rubric) $\to$ \texttt{Score} $\to$ \texttt{FactCheck} (DuckDuckGo) $\to$ \texttt{Verify} (independent re-score; loops if divergence detected, max 2 retries) with PyMuPDF\,+\,python-pptx document parsing and llama-3.2-90b VLM for slide image captioning.
+        \item Integrated ChromaDB RAG (all-MiniLM-L6-v2, chunk size 500--800 chars) for natural-language jury Q\&A, SQLite persistence, and FPDF2 automated PDF report export.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Jun 2025 – Dec 2025}}
+\begin{twocolentry}{\textbf{Jun 2025 – Dec 2025} \textcolor{muted}{\small· 7 months}}
     {\textbf{ML Engineer Intern (Microsoft Track)} — \textit{DEPI, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Developed classification, regression, and clustering models with Scikit-Learn and TensorFlow; applied MLOps best practices for data preprocessing, validation, and model tracking.
-        \item Automated ETL pipelines to reduce training data preparation time and improve reproducibility.
+        \item Developed classification, regression, and clustering models using Scikit-Learn and TensorFlow; implemented MLOps best practices for data preprocessing, validation, and model tracking.
+        \item Automated ETL pipelines reducing training data preparation time and improving reproducibility across iterative experiment cycles.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Jul 2023 – Oct 2023}}
+\begin{twocolentry}{\textbf{Jul 2023 – Oct 2023} \textcolor{muted}{\small· 4 months}}
     {\textbf{Machine Learning Intern} — \textit{ITIDA / EME Initiative, Assiut EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built an industrial defect prediction model (XGBoost + Scikit-Learn) achieving \textbf{85\% accuracy} with a \textbf{40\% performance uplift} via dimensionality reduction and hyperparameter tuning.
-        \item Placed \textbf{Top 29\%} and \textbf{Top 33\%} globally in competitive Kaggle ML challenges.
+        \item Built an industrial defect prediction model (XGBoost\,+\,Scikit-Learn) achieving \textbf{85\% accuracy} with a \textbf{40\% performance uplift} via dimensionality reduction and hyperparameter tuning.
+        \item Placed \textbf{Top 29\%} and \textbf{Top 33\%} globally in competitive Kaggle ML challenges, demonstrating strong end-to-end modelling skills under benchmark conditions.
     \end{highlights}
 \end{onecolentry}
 
 % ── FEATURED PROJECTS ────────────────────────────────────────
 \section{Featured Projects}
 
-\begin{twocolentry}{\textit{Streamlit · YOLO11 · Groq · LangGraph · ChromaDB}}
+\begin{twocolentry}{\textit{LangGraph · YOLO11 · Groq · ChromaDB · PyMuPDF}}
     {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}}\
      \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
 \end{twocolentry}
-\vspace{0.04cm}
+\vspace{0.03cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Automated hackathon judging via multimodal analysis (audio STT, body-language pose, PDF/PPTX) and a LangGraph agentic grader with ChromaDB RAG and leaderboard dashboard.
+        \item 2-phase agentic judging: YOLOv11\,+\,ByteTrack body language scoring + Groq Whisper STT (Phase\,1); LangGraph Plan$\to$Score$\to$FactCheck$\to$Verify grading agent with VLM slide parsing (Phase\,2).
+        \item SHA-256 plan caching, DuckDuckGo web fact-checking, ChromaDB RAG (MiniLM-L6-v2) jury assistant, and FPDF2 automated PDF reports.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.08cm}
+\vspace{0.07cm}
 
 \begin{twocolentry}{\textit{FastAPI · MiniLM-L6 · BM25 · OpenRouter · SSE}}
     {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}}\
      \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
 \end{twocolentry}
-\vspace{0.04cm}
+\vspace{0.03cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Zero-wrapper legal RAG pipeline with Hybrid Retrieval (RRF), section-aware chunking (Articles/Clauses), SSE streaming, source citations, cross-document comparison, and DOCX export.
+        \item Zero-wrapper legal RAG: section-aware chunking at Article/Clause boundaries, Hybrid Retrieval (BM25\,+\,MiniLM-L6-v2 dense\,+\,RRF), real-time SSE token streaming, source citations, and DOCX export — no LangChain or FAISS.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.08cm}
+\vspace{0.07cm}
 
-\begin{twocolentry}{\textit{Tantivy · LightGBM LambdaRank · Modal · Streamlit}}
+\begin{twocolentry}{\textit{Tantivy · LightGBM LambdaRank · SentenceTransformers · Modal}}
     {\textbf{Semantrix: Learning-to-Rank Search Engine}}
 \end{twocolentry}
-\vspace{0.04cm}
+\vspace{0.03cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item 2-stage LTR engine on MS MARCO: Tantivy BM25 recall re-ranked with LightGBM LambdaRank (7 engineered features) and Modal serverless GPU inference.
+        \item 2-stage LTR over 8.8M MS\,MARCO documents: Tantivy BM25 Stage-1 recall (SymSpell spell-check\,+\,fuzzy fallback) $\to$ LightGBM LambdaRank Stage-2 re-ranking with 7 features (BM25 proxy, TF-IDF proxy, overlap ratio, exact match, semantic cosine via MiniLM-L6-v2).
+        \item Trained on Modal A100/T4 GPU; NDCG@10 evaluated; Streamlit UI with live feature-importance breakdown.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.08cm}
+\vspace{0.07cm}
 
-\begin{twocolentry}{\textit{Express.js · React · DINO · Qdrant · Docker}}
+\begin{twocolentry}{\textit{DINOv2 · BGE-M3 · Qdrant · Express.js · React\,19}}
     {\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
 \end{twocolentry}
-\vspace{0.04cm}
+\vspace{0.03cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Full-stack e-commerce search platform supporting text, DINO+Qdrant visual similarity, and Whisper audio search indexing 9,800+ products.
+        \item DINOv2 ViT-S/14 (384-dim cosine) visual search\,+\,BGE-M3 1024-dim dense\,+\,sparse hybrid RRF text search\,+\,Whisper STT voice search over 9,842 products via Qdrant (local embedded).
+        \item Cloudflare Workers\,AI intent parsing (price/rating filters, appliance guards), score boosting with discount\,+\,rating signals, JWT auth with role-based access, and Docker\,+\,MongoDB\,7 containerised stack.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.08cm}
+\vspace{0.07cm}
 
-\begin{twocolentry}{\textit{LibreChat · Claude Sonnet · GPT-4.1 · Gemini · Tavily}}
+\begin{twocolentry}{\textit{LibreChat · Gemini\,2.5\,Pro · Claude\,Sonnet\,4 · GPT-4.1 · pgvector}}
     {\textbf{ContentPro Creator Agent}}
 \end{twocolentry}
-\vspace{0.04cm}
+\vspace{0.03cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item 3-model Mixture-of-Agents (MoA) content pipeline on LibreChat: Gemini web search research $\to$ Claude Sonnet writing $\to$ GPT-4.1 formatting and quality control.
+        \item 3-model Mixture-of-Agents pipeline: \textbf{Gemini 2.5 Pro} (1M-ctx researcher; Tavily\,+\,Firecrawl\,+\,Jina reranker) $\to$ \textbf{Claude Sonnet 4} (platform-adapted writer; LinkedIn/blog/social; LibreChat Artifacts) $\to$ \textbf{GPT-4.1} (editor; CTA, hashtag, word-count QA).
+        \item pgvector RAG for brand voice guidelines; MeiliSearch conversation history; supports OpenRouter, Helicone, Portkey, and Groq endpoints.
     \end{highlights}
 \end{onecolentry}
 
@@ -268,8 +267,8 @@ AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0) and hands-on experience
 % ── CERTIFICATIONS ───────────────────────────────────────────
 \section{Courses \& Certifications}
 \begin{onecolentry}
-\textbf{Getting Started with Deep Learning} — NVIDIA DLI \hfill Dec 2025 \\[2pt]
-\textbf{Applied Data Science Lab} — WorldQuant University \hfill Jul 2023 \\[2pt]
+\textbf{Getting Started with Deep Learning} — NVIDIA Deep Learning Institute \hfill Dec 2025\\[2pt]
+\textbf{Applied Data Science Lab} — WorldQuant University \hfill Jul 2023\\[2pt]
 \textbf{Data Analysis Professional Nanodegree} — Udacity \hfill Dec 2022
 \end{onecolentry}
 
