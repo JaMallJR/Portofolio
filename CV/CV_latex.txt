@@ -29,11 +29,9 @@
     urlcolor=accent,
     linkcolor=accent
 ]{hyperref}
-\usepackage[pscoord]{eso-pic}
 \usepackage{calc}
 \usepackage{bookmark}
 \usepackage{changepage}
-\usepackage{paracol}
 \usepackage{needspace}
 \usepackage{iftex}
 
@@ -54,7 +52,6 @@
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 \setlength{\topskip}{0pt}
-\setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
 \titleformat{\section}
@@ -74,15 +71,11 @@
 \newenvironment{onecolentry}{%
     \begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
 
-\newenvironment{twocolentry}[2][]{%
-    \onecolentry
-    \def\secondColumn{#2}%
-    \setcolumnwidth{\fill, 5.0cm}%
-    \begin{paracol}{2}%
-}{%
-    \switchcolumn\raggedleft\secondColumn
-    \end{paracol}%
-    \endonecolentry
+% Reliable date-line command using \hfill, exactly like the Courses section
+\newcommand{\entryline}[2]{%
+    \begin{onecolentry}
+    #1 \hfill #2
+    \end{onecolentry}
 }
 
 \newenvironment{header}{%
@@ -135,9 +128,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 % ── EXPERIENCE ───────────────────────────────────────────────
 \section{Experience}
 
-\begin{twocolentry}{\textbf{Feb 2026 -- May 2026} \\ \small\textcolor{muted}{4 months}}
-    {\textbf{AI Engineer Intern} \\ \textit{Areeb Technology, Cairo EG}}
-\end{twocolentry}
+\entryline{\textbf{AI Engineer Intern} -- \textit{Areeb Technology, Cairo EG}}{\textbf{Feb 2026 -- May 2026} \small\textcolor{muted}{(4 months)}}
 \vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -149,9 +140,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Oct 2025 -- Jan 2026} \\ \small\textcolor{muted}{4 months}}
-    {\textbf{AI Engineer Intern} \\ \textit{NTI, Cairo EG}}
-\end{twocolentry}
+\entryline{\textbf{AI Engineer Intern} -- \textit{NTI, Cairo EG}}{\textbf{Oct 2025 -- Jan 2026} \small\textcolor{muted}{(4 months)}}
 \vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -162,9 +151,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Jun 2025 -- Dec 2025} \\ \small\textcolor{muted}{7 months}}
-    {\textbf{ML Engineer Intern -- Microsoft Track} \\ \textit{DEPI, Cairo EG}}
-\end{twocolentry}
+\entryline{\textbf{ML Engineer Intern -- Microsoft Track} -- \textit{DEPI, Cairo EG}}{\textbf{Jun 2025 -- Dec 2025} \small\textcolor{muted}{(7 months)}}
 \vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -174,9 +161,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.10cm}
 
-\begin{twocolentry}{\textbf{Jul 2023 -- Oct 2023} \\ \small\textcolor{muted}{4 months}}
-    {\textbf{Machine Learning Intern} \\ \textit{ITIDA / EME Initiative, Assiut EG}}
-\end{twocolentry}
+\entryline{\textbf{Machine Learning Intern} -- \textit{ITIDA / EME Initiative, Assiut EG}}{\textbf{Jul 2023 -- Oct 2023} \small\textcolor{muted}{(4 months)}}
 \vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -187,9 +172,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 % ── FEATURED PROJECTS ────────────────────────────────────────
 \section{Featured Projects}
 
-\begin{twocolentry}{\textit{LangGraph, YOLOv11, Groq, ChromaDB}}
-    {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}} \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
-\end{twocolentry}
+\entryline{\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}} \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}{\textit{LangGraph, YOLOv11, Groq, ChromaDB}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -199,9 +182,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.06cm}
 
-\begin{twocolentry}{\textit{FastAPI, MiniLM-L6, BM25, OpenRouter, SSE}}
-    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}} \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
-\end{twocolentry}
+\entryline{\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}} \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}{\textit{FastAPI, MiniLM-L6, BM25, OpenRouter, SSE}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -211,9 +192,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.06cm}
 
-\begin{twocolentry}{\textit{Tantivy, LightGBM LambdaRank, SentenceTransformers, Modal}}
-    {\textbf{Semantrix: Learning-to-Rank Search Engine}}
-\end{twocolentry}
+\entryline{\textbf{Semantrix: Learning-to-Rank Search Engine}}{\textit{Tantivy, LightGBM LambdaRank, SentenceTransformers, Modal}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -223,9 +202,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.06cm}
 
-\begin{twocolentry}{\textit{DINOv2, BGE-M3, Qdrant, Express.js, React 19}}
-    {\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
-\end{twocolentry}
+\entryline{\textbf{OmniFind: Multi-Modal Product Discovery Platform}}{\textit{DINOv2, BGE-M3, Qdrant, Express.js, React 19}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -235,9 +212,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 
 \vspace{0.06cm}
 
-\begin{twocolentry}{\textit{LibreChat, Gemini 2.5 Pro, Claude Sonnet 4, GPT-4.1}}
-    {\textbf{ContentPro Creator Agent}}
-\end{twocolentry}
+\entryline{\textbf{ContentPro Creator Agent}}{\textit{LibreChat, Gemini 2.5 Pro, Claude Sonnet 4, GPT-4.1}}
 \vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
@@ -248,9 +223,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 % ── EDUCATION ────────────────────────────────────────────────
 \section{Education}
 
-\begin{twocolentry}{\textbf{Jul 2023}}
-    {\textbf{BSc in Bioinformatics} -- GPA \textbf{3.61 / 4.0} (Very Good with Honors)}
-\end{twocolentry}
+\entryline{\textbf{BSc in Bioinformatics} -- GPA \textbf{3.61 / 4.0} (Very Good with Honors)}{\textbf{Jul 2023}}
 \begin{onecolentry}
     \textit{Faculty of Computers \& Information, Assiut University, Egypt} -- Graduation Project recognised for excellence.
 \end{onecolentry}
