@@ -1,6 +1,6 @@
 % ============================================================
 % Jamal Ghobrial — AI Engineer CV
-% ATS-optimised · a4paper · balanced technical/non-technical language
+% ATS-optimised · a4paper · 1-2 page target
 % ============================================================
 \documentclass[10pt, a4paper]{article}
 
@@ -19,12 +19,11 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{accent}{RGB}{0, 79, 144}
 \definecolor{muted}{RGB}{100, 100, 100}
-\definecolor{milestone}{RGB}{0, 110, 60}
 \usepackage{enumitem}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
 \usepackage[
-    pdftitle={Jamal Ghobrial — AI Engineer},
+    pdftitle={Jamal Ghobrial -- AI Engineer},
     pdfauthor={Jamal Ghobrial},
     colorlinks=true,
     urlcolor=accent,
@@ -48,7 +47,7 @@
 \fi
 \usepackage{charter}
 
-% ── Layout settings ─────────────────────────────────────────
+% ── Layout ──────────────────────────────────────────────────
 \raggedright
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty}
@@ -62,15 +61,14 @@
   {\needspace{3\baselineskip}\bfseries\large\color{accent}}
   {}{0pt}{}
   [\vspace{1pt}{\color{accent}\titlerule}]
-
-\titlespacing{\section}{0pt}{0.22cm}{0.10cm}
+\titlespacing{\section}{0pt}{0.20cm}{0.08cm}
 
 % ── Custom environments ─────────────────────────────────────
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
 
 \newenvironment{highlights}{%
-    \begin{itemize}[topsep=0.04cm, parsep=0.04cm,
-                    partopsep=0pt, itemsep=2pt, leftmargin=11pt]%
+    \begin{itemize}[topsep=0.03cm, parsep=0.03cm,
+                    partopsep=0pt, itemsep=1.5pt, leftmargin=11pt]%
 }{\end{itemize}}
 
 \newenvironment{onecolentry}{%
@@ -90,11 +88,6 @@
 \newenvironment{header}{%
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.25}%
 }{\par\kern\topsep}
-
-% ── Milestone badge command ──────────────────────────────────
-\newcommand{\milestonebadge}[2]{%
-  \textbf{#1} \quad {\color{milestone}\small\faCalendarAlt\ \textbf{#2}}%
-}
 
 % ============================================================
 \begin{document}
@@ -120,149 +113,135 @@
 
 % ── PROFESSIONAL SUMMARY ─────────────────────────────────────
 \section{Professional Summary}
+
 \begin{onecolentry}
-AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0, Very Good with Honors) who builds systems that automate complex decision-making, retrieve information intelligently, and understand multiple types of input — text, images, speech, and documents. Across 4 internships and 19+ months of hands-on experience, delivered 5 production AI systems: an automated hackathon judging platform, a legal research assistant, a large-scale document search engine, a multimodal product discovery platform, and an automated content creation pipeline. Recognised as a strong problem-solver and collaborative team player, with a competitive edge in machine learning (Top\,29\% Kaggle globally). Certified by NVIDIA, Microsoft, and WorldQuant University.
+AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) and 19+ months across 4 internships building production AI systems end-to-end. Delivered 5 projects covering automated judging, legal research, large-scale document search, multimodal e-commerce discovery, and autonomous content creation -- each going from raw data to deployed system. Strong collaborator in agile, cloud-based teams; competitive machine learning practitioner (Top 29\% Kaggle globally). Certified by NVIDIA, Microsoft, and WorldQuant University.
 \end{onecolentry}
 
 % ── TECHNICAL SKILLS ─────────────────────────────────────────
 \section{Technical Skills}
 
 \begin{onecolentry}
-\textbf{Programming:} Python, SQL, Go, C++ — with deep experience in data science libraries (PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas)\\[3pt]
-\textbf{AI Agents \& Automation:} Building multi-step AI agents that plan, reason, search the web, and self-verify (LangGraph, Groq SDK, OpenAI, Claude, Gemini, OpenRouter)\\[3pt]
-\textbf{Search \& Information Retrieval:} Ranking and retrieving relevant results from millions of documents — combining keyword search, semantic understanding, and machine learning re-ranking (Tantivy BM25, LightGBM LambdaRank, Hybrid RRF, SentenceTransformers: MiniLM-L6-v2, BGE-M3)\\[3pt]
-\textbf{Vision \& Speech AI:} Making systems see and hear — image recognition, body-language analysis, and voice-to-text (YOLOv11 Pose, ByteTrack, DINOv2, Whisper STT via Groq / Faster-Whisper, PyMuPDF)\\[3pt]
-\textbf{Knowledge Retrieval (RAG):} Enabling AI to answer questions from private documents by storing and searching through knowledge bases (ChromaDB, Qdrant, pgvector, Hybrid Retrieval, RAG Pipelines)\\[3pt]
-\textbf{Web \& Full-Stack Development:} FastAPI, Express.js, React\,19, Node.js, MongoDB, JWT Auth, Docker, Vite\\[3pt]
-\textbf{Cloud \& Deployment:} Deploying AI systems at scale on cloud infrastructure (Microsoft Azure, AWS SageMaker, Docker, Modal Labs GPU, Git/GitHub)\\[3pt]
-\textbf{Platforms \& Tools:} LibreChat (self-hosted), Tavily Search, Firecrawl, Jina\,AI, SymSpell, FPDF2, MoviePy, python-pptx
+\textbf{Languages \& Libraries:} Python (PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas, SciPy), SQL, Go, C++\\[2.5pt]
+\textbf{ML \& Ranking:} LightGBM LambdaRank, XGBoost, Feature Engineering, Learning-to-Rank (LTR), NDCG Optimisation, ML Pipelines\\[2.5pt]
+\textbf{LLM \& Agentic AI:} LangGraph StateGraph, Groq SDK, OpenAI API, Anthropic Claude API, Gemini API, OpenRouter, Prompt Engineering\\[2.5pt]
+\textbf{RAG \& Vector Search:} RAG Pipelines, ChromaDB, Qdrant, pgvector, Hybrid Retrieval (BM25 + Dense RRF), SentenceTransformers (MiniLM-L6-v2, BGE-M3), Tantivy BM25\\[2.5pt]
+\textbf{Computer Vision \& Speech:} YOLOv11 Pose, ByteTrack, DINOv2 (ViT-S/14), Whisper STT (Groq / Faster-Whisper), PyMuPDF, python-pptx, MoviePy\\[2.5pt]
+\textbf{Web \& Full-Stack:} FastAPI, Express.js, React 19, Node.js, MongoDB / Mongoose, JWT Auth, Multer, Vite\\[2.5pt]
+\textbf{Tools \& Platforms:} LibreChat, Tavily Search, Firecrawl, Jina AI Reranker, SymSpell, Mixture-of-Agents (MoA), FPDF2, Docker Compose\\[2.5pt]
+\textbf{Cloud \& DevOps:} Microsoft Azure, AWS SageMaker, Docker, Modal Labs (A100 / T4 GPU), Git / GitHub
 \end{onecolentry}
 
 % ── EXPERIENCE ───────────────────────────────────────────────
 \section{Experience}
 
-% ── Role 1 ──
-\begin{twocolentry}{\milestonebadge{Feb 2026 – May 2026}{4 months}}
-    {\textbf{AI Engineer Intern} $\cdot$ \textit{Areeb Technology — Cairo, Egypt}}
+\begin{twocolentry}{\textbf{Feb 2026 -- May 2026} \\ \small\textcolor{muted}{4 months}}
+    {\textbf{AI Engineer Intern} \\ \textit{Areeb Technology, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built \textbf{OmniFind} — a product discovery platform where shoppers find items by uploading a photo, speaking a query, or typing text, searching across 9,842 Amazon products in near real-time. \textit{(DINOv2 visual embeddings, BGE-M3 hybrid semantic search with Qdrant RRF fusion, Groq Whisper voice transcription, React\,19\,+\,Express\,+\,MongoDB\,7)}
-        \item Developed \textbf{Semantrix} — a two-stage search engine that first retrieves thousands of candidate documents instantly, then reranks them using a trained machine learning model to surface the most relevant results. Indexed \textbf{8.8 million documents} from the MS\,MARCO benchmark. \textit{(Tantivy BM25 retrieval, LightGBM LambdaRank with 7 engineered features, Modal A100 GPU)}
-        \item Architected \textbf{ContentPro Creator Agent} — an automated content pipeline where one AI researches current trends online, a second writes engaging platform-specific posts, and a third quality-checks every output before publication. \textit{(3-model MoA: Gemini\,2.5\,Pro researcher + Tavily/Firecrawl, Claude\,Sonnet\,4 writer, GPT-4.1 editor on LibreChat with pgvector RAG)}
-        \item Collaborated in an agile team on Microsoft Azure, delivering structured pull-request reviews and documentation to ensure smooth handoffs.
+        \item Built OmniFind, a multimodal e-commerce search platform where users find products by image, voice, or text query across 9,842 items -- using DINOv2 visual embeddings, BGE-M3 hybrid RRF semantic search, and Groq Whisper STT on a React 19 + Express + MongoDB + Qdrant stack with JWT role-based access control.
+        \item Developed Semantrix, a 2-stage search engine indexing 8.8M MS MARCO documents -- Tantivy BM25 recall with SymSpell spell-correction, re-ranked by LightGBM LambdaRank (7 engineered features) on Modal A100 GPU -- achieving NDCG@10 improvement over BM25 baseline.
+        \item Architected ContentPro Creator Agent, a 3-model Mixture-of-Agents pipeline on LibreChat: Gemini 2.5 Pro (research + Tavily/Firecrawl/Jina) to Claude Sonnet 4 (writing + LibreChat Artifacts) to GPT-4.1 (QA editor), with pgvector RAG for brand-voice consistency.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-% ── Role 2 ──
-\begin{twocolentry}{\milestonebadge{Oct 2025 – Jan 2026}{4 months}}
-    {\textbf{AI Engineer Intern} $\cdot$ \textit{NTI (National Telecommunications Institute) — Cairo, Egypt}}
+\begin{twocolentry}{\textbf{Oct 2025 -- Jan 2026} \\ \small\textcolor{muted}{4 months}}
+    {\textbf{AI Engineer Intern} \\ \textit{NTI, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed \textbf{Digitopia} — an AI judge that automatically evaluates hackathon presentations by watching pitch videos (analysing speech clarity, body language, and gestures), reading project documents, and producing structured scores — replacing hours of manual jury work. \textit{(Groq Whisper STT, YOLOv11 Pose\,+\,ByteTrack, LangGraph self-verifying grading agent, PyMuPDF document parsing)}
-        \item Built a smart Q\&A assistant for jury panels: judges ask natural-language questions (e.g. "Which team had the best technical depth?") and receive answers grounded in all evaluation data. \textit{(ChromaDB RAG, all-MiniLM-L6-v2 embeddings, Groq llama-3.3-70b)}
-        \item Benchmarked Machine Learning, Deep Learning, Computer Vision, and NLP models using PyTorch and TensorFlow, producing structured performance reports for each evaluation cycle.
+        \item Designed Digitopia AI Competition Judgment System: Phase 1 extracts audio (MoviePy + Groq Whisper STT) and tracks body language per presenter (YOLOv11 Pose + ByteTrack, scoring gesture rate, posture variance, and head movement); Phase 2 runs a LangGraph StateGraph grading agent (Plan, Score, FactCheck via DuckDuckGo, Verify with self-correction) over PyMuPDF + python-pptx document inputs.
+        \item Integrated ChromaDB RAG (MiniLM-L6-v2) for natural-language jury Q\&A over all evaluation data, SQLite persistence, and FPDF2 automated PDF report generation; benchmarked ML, CV, and NLP models across PyTorch and TensorFlow.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-% ── Role 3 ──
-\begin{twocolentry}{\milestonebadge{Jun 2025 – Dec 2025}{7 months}}
-    {\textbf{ML Engineer Intern — Microsoft Track} $\cdot$ \textit{DEPI — Cairo, Egypt}}
+\begin{twocolentry}{\textbf{Jun 2025 -- Dec 2025} \\ \small\textcolor{muted}{7 months}}
+    {\textbf{ML Engineer Intern -- Microsoft Track} \\ \textit{DEPI, Cairo EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Trained and evaluated AI models for classification, prediction, and pattern discovery tasks using industry-standard tools (Scikit-Learn, TensorFlow), following MLOps best practices for reproducibility and version control.
-        \item Automated data preparation pipelines, cutting the time needed to prepare training data and enabling faster experimentation cycles.
+        \item Trained classification, regression, and clustering models (Scikit-Learn, TensorFlow) following MLOps best practices; automated ETL pipelines to reduce data preparation time across iterative experiment cycles.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 
-% ── Role 4 ──
-\begin{twocolentry}{\milestonebadge{Jul 2023 – Oct 2023}{4 months}}
-    {\textbf{Machine Learning Intern} $\cdot$ \textit{ITIDA / EME Initiative — Assiut, Egypt}}
+\begin{twocolentry}{\textbf{Jul 2023 -- Oct 2023} \\ \small\textcolor{muted}{4 months}}
+    {\textbf{Machine Learning Intern} \\ \textit{ITIDA / EME Initiative, Assiut EG}}
 \end{twocolentry}
-\vspace{0.06cm}
+\vspace{0.05cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built a quality-control AI model that predicts industrial defects before they reach customers, achieving \textbf{85\% accuracy} — a \textbf{40\% improvement} over the baseline through careful feature selection and model tuning. \textit{(XGBoost, Scikit-Learn, dimensionality reduction)}
-        \item Competed globally on Kaggle machine learning challenges, ranking in the \textbf{Top 29\%} and \textbf{Top 33\%} out of thousands of participants worldwide.
+        \item Built an industrial defect prediction model (XGBoost + Scikit-Learn) achieving \textbf{85\% accuracy} with a \textbf{40\% performance uplift} via dimensionality reduction and hyperparameter tuning; placed \textbf{Top 29\%} and \textbf{Top 33\%} in global Kaggle ML competitions.
     \end{highlights}
 \end{onecolentry}
 
 % ── FEATURED PROJECTS ────────────────────────────────────────
 \section{Featured Projects}
 
-\begin{twocolentry}{\textit{LangGraph · YOLOv11 · Groq · ChromaDB · PyMuPDF}}
-    {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}}\
-     \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
+\begin{twocolentry}{\textit{LangGraph, YOLOv11, Groq, ChromaDB}}
+    {\textbf{\href{https://github.com/JaMallJR/AI-Competition-Judgment}{Digitopia AI Competition Judgment System}} \href{https://github.com/JaMallJR/AI-Competition-Judgment}{\faGithub}}
 \end{twocolentry}
-\vspace{0.03cm}
+\vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item An AI system that replaces manual hackathon judging — it watches pitch videos to analyse speech and body language (Phase\,1), reads project documents and slide decks to grade technical depth and innovation (Phase\,2), and answers jury questions in natural language. Produces PDF evaluation reports automatically.
-        \item \textit{Technical: LangGraph Plan$\to$Score$\to$FactCheck$\to$Verify self-correcting grading agent; YOLOv11 Pose + ByteTrack body-language metrics; SHA-256 rubric caching; ChromaDB RAG jury assistant.}
+        \item AI judging system that automatically scores hackathon teams by analysing pitch videos (Groq Whisper STT + YOLOv11 Pose body-language) and project documents (LangGraph self-verifying grading agent: Plan, Score, FactCheck, Verify), with a ChromaDB RAG jury assistant and FPDF2 PDF report export.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.07cm}
+\vspace{0.06cm}
 
-\begin{twocolentry}{\textit{FastAPI · MiniLM-L6 · BM25 · OpenRouter · SSE}}
-    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}}\
-     \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
+\begin{twocolentry}{\textit{FastAPI, MiniLM-L6, BM25, OpenRouter, SSE}}
+    {\textbf{\href{https://github.com/JaMallJR/LegalCompanyRAG}{LexAI: Legal Document Assistant}} \href{https://github.com/JaMallJR/LegalCompanyRAG}{\faGithub}}
 \end{twocolentry}
-\vspace{0.03cm}
+\vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item A legal research assistant that reads contracts, regulations, and company documents — answering specific legal questions with cited sources and streaming responses in real time. Supports cross-document queries and exports conversations to DOCX. Built with no third-party AI framework wrappers.
-        \item \textit{Technical: Hybrid Retrieval (BM25 + dense MiniLM-L6-v2 with RRF fusion), section-aware chunking at Article/Clause boundaries, SSE token streaming, DOCX export.}
+        \item Legal research assistant with Hybrid Retrieval (BM25 + MiniLM-L6-v2 dense + RRF), section-aware chunking at Article/Clause boundaries, real-time SSE token streaming, source citations, cross-document querying, and DOCX export -- no LangChain or FAISS dependencies.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.07cm}
+\vspace{0.06cm}
 
-\begin{twocolentry}{\textit{Tantivy · LightGBM LambdaRank · SentenceTransformers · Modal}}
+\begin{twocolentry}{\textit{Tantivy, LightGBM LambdaRank, SentenceTransformers, Modal}}
     {\textbf{Semantrix: Learning-to-Rank Search Engine}}
 \end{twocolentry}
-\vspace{0.03cm}
+\vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item A search engine that not only finds documents quickly across \textbf{8.8 million records}, but intelligently reranks results using a trained ML model — combining keyword matching, semantic understanding, and document quality signals. Includes spell correction and fuzzy search for typo-tolerance.
-        \item \textit{Technical: Tantivy BM25 Stage-1 recall + LightGBM LambdaRank Stage-2 with 7 features; SymSpell correction; NDCG@10 evaluation; Modal A100/T4 serverless GPU.}
+        \item 2-stage LTR pipeline over 8.8M MS MARCO documents: Tantivy BM25 + SymSpell recall, re-ranked by LightGBM LambdaRank with 7 features (BM25 proxy, TF-IDF proxy, overlap ratio, exact match, semantic cosine via MiniLM-L6-v2), deployed serverlessly on Modal A100/T4 GPU.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.07cm}
+\vspace{0.06cm}
 
-\begin{twocolentry}{\textit{DINOv2 · BGE-M3 · Qdrant · Express.js · React\,19}}
+\begin{twocolentry}{\textit{DINOv2, BGE-M3, Qdrant, Express.js, React 19}}
     {\textbf{OmniFind: Multi-Modal Product Discovery Platform}}
 \end{twocolentry}
-\vspace{0.03cm}
+\vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item An e-commerce search platform that understands what shoppers are looking for regardless of how they express it — by photo, voice recording, or text description — across \textbf{9,842 products}. Includes smart intent parsing that extracts price filters and ratings from natural language.
-        \item \textit{Technical: DINOv2 visual search (384-dim), BGE-M3 dense+sparse hybrid RRF, Groq Whisper STT, Cloudflare Workers AI intent parser, JWT auth with admin/user/guest roles.}
+        \item Full-stack e-commerce search supporting image (DINOv2 384-dim cosine), text (BGE-M3 1024-dim dense+sparse RRF), and voice (Groq Whisper) search over 9,842 products, with Cloudflare Workers AI intent parsing, score boosting, JWT auth, and Docker + MongoDB 7 stack.
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.07cm}
+\vspace{0.06cm}
 
-\begin{twocolentry}{\textit{LibreChat · Gemini\,2.5\,Pro · Claude\,Sonnet\,4 · GPT-4.1 · pgvector}}
+\begin{twocolentry}{\textit{LibreChat, Gemini 2.5 Pro, Claude Sonnet 4, GPT-4.1}}
     {\textbf{ContentPro Creator Agent}}
 \end{twocolentry}
-\vspace{0.03cm}
+\vspace{0.02cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item An automated content creation pipeline that produces publication-ready posts: one AI researches current trends and facts, a second writes engaging platform-adapted content (LinkedIn, blogs, social), and a third performs quality control on formatting, CTAs, and brand voice.
-        \item \textit{Technical: 3-model MoA — Gemini\,2.5\,Pro (research + Tavily/Firecrawl/Jina) $\to$ Claude\,Sonnet\,4 (writer, LibreChat Artifacts) $\to$ GPT-4.1 (QA editor); pgvector RAG for brand guidelines.}
+        \item 3-model Mixture-of-Agents content pipeline: Gemini 2.5 Pro (web research via Tavily + Firecrawl + Jina reranker) to Claude Sonnet 4 (platform-adapted writing, LibreChat Artifacts) to GPT-4.1 (QA: CTA, hashtag, word-count checks), with pgvector RAG for brand guidelines.
     \end{highlights}
 \end{onecolentry}
 
@@ -270,22 +249,24 @@ AI Engineer with a BSc in Bioinformatics (GPA\,3.61/4.0, Very Good with Honors) 
 \section{Education}
 
 \begin{twocolentry}{\textbf{Jul 2023}}
-    {\textbf{BSc in Bioinformatics} — GPA \textbf{3.61 / 4.0} (Very Good with Honors)}
+    {\textbf{BSc in Bioinformatics} -- GPA \textbf{3.61 / 4.0} (Very Good with Honors)}
 \end{twocolentry}
 \begin{onecolentry}
-    \textit{Faculty of Computers \& Information, Assiut University, Egypt} \quad — Graduation Project recognised for excellence.
+    \textit{Faculty of Computers \& Information, Assiut University, Egypt} -- Graduation Project recognised for excellence.
 \end{onecolentry}
 
 % ── CERTIFICATIONS ───────────────────────────────────────────
 \section{Courses \& Certifications}
+
 \begin{onecolentry}
-\textbf{Getting Started with Deep Learning} — NVIDIA Deep Learning Institute \hfill Dec 2025\\[2pt]
-\textbf{Applied Data Science Lab} — WorldQuant University \hfill Jul 2023\\[2pt]
-\textbf{Data Analysis Professional Nanodegree} — Udacity \hfill Dec 2022
+\textbf{Getting Started with Deep Learning} -- NVIDIA Deep Learning Institute \hfill Dec 2025 \\[2pt]
+\textbf{Applied Data Science Lab} -- WorldQuant University \hfill Jul 2023 \\[2pt]
+\textbf{Data Analysis Professional Nanodegree} -- Udacity \hfill Dec 2022
 \end{onecolentry}
 
 % ── ADDITIONAL INFORMATION ───────────────────────────────────
 \section{Additional Information}
+
 \begin{onecolentry}
 \textbf{Languages:} Arabic (Native) \quad English (Professional Working) \qquad
 \textbf{Military Service:} Completed (Jun 2025)
