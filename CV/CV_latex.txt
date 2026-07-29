@@ -61,7 +61,8 @@
 \titlespacing{\section}{0pt}{0.20cm}{0.08cm}
 
 % ── Custom environments ─────────────────────────────────────
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+% Custom environments
+\renewcommand\labelitemi{\textbullet}
 
 \newenvironment{highlights}{%
     \begin{itemize}[topsep=0.03cm, parsep=0.03cm,
@@ -71,10 +72,10 @@
 \newenvironment{onecolentry}{%
     \begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
 
-% Reliable date-line command using \hfill, exactly like the Courses section
+% Reliable date-line command using \hfill with explicit space separator for ATS
 \newcommand{\entryline}[2]{%
     \begin{onecolentry}
-    #1 \hfill #2
+    #1~~\hfill #2
     \end{onecolentry}
 }
 
@@ -91,15 +92,15 @@
     {\fontsize{11pt}{11pt}\selectfont\color{accent}
      AI Engineer \ $|$ \ Machine Learning \ $|$ \ Intelligent Systems \& Automation}\\[5pt]
     \small
-    \faEnvelope\ \href{mailto:ghobrialjamal@gmail.com}{ghobrialjamal@gmail.com}
+    \href{mailto:ghobrialjamal@gmail.com}{\faEnvelope\ ghobrialjamal@gmail.com}
     \quad\textcolor{muted}{|}
-    \faPhone\ \href{tel:+201501705943}{+20 150 170 5943}
+    \href{tel:+201501705943}{\faPhone\ +20 150 170 5943}
     \quad\textcolor{muted}{|}
-    \faGithub\ \href{https://github.com/ghobrialjamal}{github.com/ghobrialjamal}
+    \href{https://github.com/ghobrialjamal}{\faGithub\ github.com/ghobrialjamal}
     \quad\textcolor{muted}{|}
-    \faLinkedin\ \href{https://www.linkedin.com/in/jamal-ghobrial/}{linkedin.com/in/jamal-ghobrial}
+    \href{https://www.linkedin.com/in/jamal-ghobrial/}{\faLinkedin\ linkedin.com/in/jamal-ghobrial}
     \quad\textcolor{muted}{|}
-    \faGlobe\ \href{https://ghobrialjamal.github.io/Portofolio/}{Portfolio}
+    \href{https://ghobrialjamal.github.io/Portofolio/}{\faGlobe\ Portfolio}
 \end{header}
 
 \vspace{0.05cm}
