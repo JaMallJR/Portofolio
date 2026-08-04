@@ -109,7 +109,7 @@
 \section{Professional Summary}
 
 \begin{onecolentry}
-AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) and 19+ months across 4 internships building production AI systems end-to-end. Delivered 5 projects covering automated judging, legal research, large-scale document search, multimodal e-commerce discovery, and autonomous content creation -- each going from raw data to deployed system. Strong collaborator in agile, cloud-based teams; competitive machine learning practitioner (Top 29\% Kaggle globally). Certified by NVIDIA, Microsoft, and WorldQuant University.
+AI Engineer with a BSc in Information Systems (Bioinformatics) (GPA 3.61/4.0, Very Good with Honors) and 19+ months across 4 internships building production AI systems end-to-end. Delivered 5 projects covering automated judging, legal research, large-scale document search, multimodal e-commerce discovery, and autonomous content creation -- each going from raw data to deployed system. Strong collaborator in agile, cloud-based teams; competitive machine learning practitioner (Top 29\% Kaggle globally). Certified by NVIDIA, Microsoft, and WorldQuant University.
 \end{onecolentry}
 
 % ── TECHNICAL SKILLS ─────────────────────────────────────────
@@ -224,7 +224,7 @@ AI Engineer with a BSc in Bioinformatics (GPA 3.61/4.0, Very Good with Honors) a
 % ── EDUCATION ────────────────────────────────────────────────
 \section{Education}
 
-\entryline{\textbf{BSc in Bioinformatics} -- GPA \textbf{3.61 / 4.0} (Very Good with Honors)}{\textbf{Jul 2023}}
+\entryline{\textbf{BSc in Information Systems (Bioinformatics)} -- GPA \textbf{3.61 / 4.0} (Very Good with Honors)}{\textbf{Jul 2023}}
 \begin{onecolentry}
     \textit{Faculty of Computers \& Information, Assiut University, Egypt} -- Graduation Project recognised for excellence.
 \end{onecolentry}
